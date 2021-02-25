@@ -25,3 +25,9 @@ function toCamelCase(str){
   })
   return newStr
 }
+
+// This is a better solution with regular expressions
+function toCamelCase2(str) {
+  return str.replace(/[-_].?/g, function(x) {if (x[1]) {return x[1].toUpperCase()} else {return ""}});
+}
+
